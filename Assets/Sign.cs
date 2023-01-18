@@ -4,7 +4,6 @@ using TMPro;
 
 public class Sign : Interactable
 {
-	[SerializeField] protected Button button;
 	[SerializeField] private GameObject noticeImage;
 	[SerializeField] string text;
 	private bool isAlreadyUsed;
@@ -15,17 +14,15 @@ public class Sign : Interactable
 		if (canOpen)
 		{
 			canOpen = false;
-			if (outline.activeInHierarchy && !button.gameObject.activeInHierarchy && !isAlreadyUsed)
+			if (outline.activeInHierarchy && !interactButton.gameObject.activeInHierarchy && !isAlreadyUsed)
 			{
-				button.gameObject.SetActive(true);
-				button.GetComponentInChildren<TextMeshProUGUI>().text = "READ";
+				DisplayInteractButton();
 			}
-
 		}
-		else if (canClose && !outline.activeInHierarchy && button.gameObject.activeInHierarchy)
+		else if (canClose && !outline.activeInHierarchy && interactButton.gameObject.activeInHierarchy)
 		{
 			canClose = false;
-			button.gameObject.SetActive(false);
+			interactButton.gameObject.SetActive(false);
 		}
 
 	}
@@ -45,13 +42,10 @@ public class Sign : Interactable
 		UIContainer.Instance.closeButton.GetComponent<Button>().onClick.RemoveAllListeners();
 		UIContainer.Instance.closeButton.GetComponent<Button>().onClick.AddListener(Close);
 		isAlreadyUsed = true;
-		Debug.Log(2);
-
 		UIContainer.Instance.signButton.SetActive(false);
 	}
 	protected void Close()
 	{
-		Debug.Log(1);
 		isAlreadyUsed = false;
 		noticeImage.SetActive(false);
 		Player.instance.enabled = true;

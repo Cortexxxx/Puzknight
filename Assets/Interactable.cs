@@ -1,14 +1,17 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Interactable : MonoBehaviour
 {
 	[SerializeField] protected GameObject outline;
 	protected Vector3 delta;
-	protected bool isActive;
+	protected bool isActive = true;
 	protected bool canBlock = false;
 	protected bool canOpen = false;
 	protected bool canClose = false;
+	[SerializeField] protected Button interactButton;
+	[SerializeField] protected string interactButtonText;
 
 	protected virtual void Update()
 	{
@@ -17,18 +20,16 @@ public class Interactable : MonoBehaviour
 		{
 			canBlock = true;
 			canOpen = true;
-			if (Player.instance.interactingWith == null && !outline.activeInHierarchy)
+			if (Player.instance.interactingWith == null && !outline.activeInHierarchy && isActive)
 			{
 				Player.instance.interactingWith = this;
 				outline.SetActive(true);
 
 				if (InteractButton.instance != null)
 				{
-					Debug.Log(1);
-
 					InteractButton.instance.GetComponent<Button>().onClick.RemoveAllListeners();
-					Debug.Log(1);
 					InteractButton.instance.GetComponent<Button>().onClick.AddListener(Use);
+					DisplayInteractButton();
 				}
 			}																	
 			else if (Player.instance.interactingWith != null)
@@ -50,7 +51,11 @@ public class Interactable : MonoBehaviour
 	protected virtual void Use()
 	{
 		Debug.Log(1);
-
+	}
+	protected void DisplayInteractButton()
+	{
+		interactButton.gameObject.SetActive(true);
+		interactButton.GetComponentInChildren<TextMeshProUGUI>().text = interactButtonText;
 	}
 }
 
