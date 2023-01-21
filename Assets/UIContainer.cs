@@ -7,7 +7,8 @@ public class UIContainer : MonoBehaviour
 	public static UIContainer Instance;
 	public GameObject signImage;
 	public GameObject closeButton;
-	public GameObject signButton;
+	public GameObject interactButton;
+	public GameObject dropButton;
 	private void Awake()
 	{
 		if (Instance == null)
@@ -16,7 +17,8 @@ public class UIContainer : MonoBehaviour
 			DontDestroyOnLoad(gameObject);
 			DontDestroyOnLoad(signImage);
 			DontDestroyOnLoad(closeButton);
-			DontDestroyOnLoad(signButton);
+			DontDestroyOnLoad(interactButton);
+			DontDestroyOnLoad(dropButton);
 		}
 		else
 		{

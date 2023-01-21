@@ -5,13 +5,13 @@ using TMPro;
 public class Interactable : MonoBehaviour
 {
 	[SerializeField] protected GameObject outline;
+	[SerializeField] protected Button interactButton;
+	[SerializeField] protected string interactButtonText;
+	[HideInInspector] public bool isActive = true;
 	protected Vector3 delta;
-	protected bool isActive = true;
 	protected bool canBlock = false;
 	protected bool canOpen = false;
 	protected bool canClose = false;
-	[SerializeField] protected Button interactButton;
-	[SerializeField] protected string interactButtonText;
 
 	protected virtual void Update()
 	{

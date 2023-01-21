@@ -42,14 +42,14 @@ public class Sign : Interactable
 		UIContainer.Instance.closeButton.GetComponent<Button>().onClick.RemoveAllListeners();
 		UIContainer.Instance.closeButton.GetComponent<Button>().onClick.AddListener(Close);
 		isAlreadyUsed = true;
-		UIContainer.Instance.signButton.SetActive(false);
+		UIContainer.Instance.interactButton.SetActive(false);
 	}
 	protected void Close()
 	{
 		isAlreadyUsed = false;
 		noticeImage.SetActive(false);
 		Player.instance.enabled = true;
-		UIContainer.Instance.signButton.SetActive(true);
+		UIContainer.Instance.interactButton.SetActive(true);
 
 	}
 }
