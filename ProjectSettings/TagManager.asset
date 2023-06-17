@@ -13,7 +13,7 @@ TagManager:
   - UI
   - Blocking
   - Actor
-  - 
+  - FireHead
   - 
   - 
   - 
@@ -44,15 +44,18 @@ TagManager:
   - name: Floor
     uniqueID: 1844647849
     locked: 0
-  - name: Props - Under Player
+  - name: Walls
+    uniqueID: 692523675
+    locked: 0
+  - name: PropsUnderPlayer
     uniqueID: 4032858051
     locked: 0
   - name: Creatures
     uniqueID: 1476452773
     locked: 0
-  - name: Walls
-    uniqueID: 692523675
+  - name: Walls Upon
+    uniqueID: 1364368133
     locked: 0
-  - name: Props - Upon Player
+  - name: PropsUponPlayer
     uniqueID: 2780460921
     locked: 0

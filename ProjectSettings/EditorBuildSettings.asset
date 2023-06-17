@@ -6,6 +6,39 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/StartMenu.unity
+    guid: c94b869cf831f614eb9d968d8c9e6e23
+  - enabled: 1
+    path: Assets/Scenes/TransitionScene.unity
+    guid: 6ba4f76375402c6458240ddf0eb4a039
+  - enabled: 1
+    path: Assets/Scenes/Level01 - Plates and Signs.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Level01 - Many Plates.unity
+    guid: 6f9f7bdabe7472341af83edd8cf9af7d
+  - enabled: 1
+    path: "Assets/Scenes/Level03 - \u0421aesar \u0421ipher.unity"
+    guid: 8d40367b82c75644981956b321239634
+  - enabled: 1
+    path: Assets/Scenes/Level04 - Items.unity
+    guid: a6210b17417cda049956562b35da7376
+  - enabled: 1
+    path: Assets/Scenes/Level04 - Craft Key.unity
+    guid: 2c0a131a028e14c4a8f17280648f769d
+  - enabled: 1
+    path: Assets/Scenes/Level07 - Image Puzzle.unity
+    guid: cfd167f53eed37e4f83d74196bd9f0b7
+  - enabled: 1
+    path: Assets/Scenes/Level06 - Boss Battle.unity
+    guid: 7f0ab83fc4d596940b94b66f453faae1
+  - enabled: 1
+    path: Assets/Scenes/Level08 - Fire Heads.unity
+    guid: 570fc649570f83a438a75d560fe4ee6d
+  - enabled: 1
+    path: Assets/Scenes/Level09 - Falling Plates.unity
+    guid: 0a739478f1f1f9e4c856099b39076ce2
+  - enabled: 1
+    path: Assets/Scenes/Level10 - Balance.unity
+    guid: cd1edc476aa1ebf4c8c465e1a4898b6f
   m_configObjects: {}
