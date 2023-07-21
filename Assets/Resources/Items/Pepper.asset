@@ -15,3 +15,4 @@ MonoBehaviour:
   recipe: {fileID: 0}
   prefab: {fileID: 6666345154540612804, guid: 2c12d5c7cac537c49b34cec7ff260da6, type: 3}
   Name: Pepper
+  weight: 0.2

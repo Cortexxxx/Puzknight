@@ -14,7 +14,7 @@ public class UIContainer : MonoBehaviour
 	public GameObject interactButton;
 	public GameObject dropButton;
 	public GameObject craftResultCell;
-	public GameObject blackout;
+	public GameObject blackout1;
 	public GameObject noticeInput;
 	public GameObject workbenchImage;
 	public GameObject craftCells;

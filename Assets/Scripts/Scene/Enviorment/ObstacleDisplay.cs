@@ -33,8 +33,6 @@ public class ObstacleDisplay : MonoBehaviour
 			case Type.Collider:
 				for (int i = 0; i < spriteRenderer.Length; i++)
 				{
-					Debug.Log(spriteRenderer[i].GetComponent<BoxCollider2D>().bounds.center.y);
-					Debug.Log(Player.Instance.transform.position.y - spriteRenderer[i].GetComponent<BoxCollider2D>().bounds.center.y > 0);
 					if (Player.Instance.GetComponent<BoxCollider2D>().bounds.center.y - spriteRenderer[i].GetComponent<BoxCollider2D>().bounds.center.y > 0)
 					{
 						spriteRenderer[i].sortingLayerName = "PropsUponPlayer";

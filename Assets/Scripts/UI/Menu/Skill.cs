@@ -14,6 +14,7 @@ public class Skill : MonoBehaviour
         }
         Refresh();
         skillUpgradeButton.onClick.RemoveAllListeners();
+        skillUpgradeButton.onClick.AddListener(GetComponentInParent<AudioSource>().Play);
         skillUpgradeButton.onClick.AddListener(Upgrade);
     }
     public void Upgrade() {

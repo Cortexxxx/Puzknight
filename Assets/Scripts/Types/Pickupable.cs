@@ -11,10 +11,11 @@ public class Pickupable : Interactable
 		if (transform?.parent?.GetComponent<BalancePart>() != null)
 		{
 			transform.parent.GetComponent<BalancePart>().item = null;
+			transform.parent.GetComponent<BalancePart>().GetComponentInParent<Balance>().ReCount();
+
 		}
 		gameObject.transform.parent = null;
 		transform.localScale = new Vector2(1, 1);
-
 		gameObject.transform.parent = Player.Instance.transform;
 		GetComponent<SpriteRenderer>().sortingLayerName = "PropsUponPlayer";
 		transform.localPosition = new Vector2(0, 1);

@@ -36,6 +36,7 @@ public class Interactable : MonoBehaviour
 				if (InteractButton.instance != null)
 				{
 					interactButton.GetComponent<Button>().onClick.RemoveAllListeners();
+					interactButton.GetComponent<Button>().onClick.AddListener(UIContainer.Instance.GetComponent<AudioSource>().Play);
 					interactButton.GetComponent<Button>().onClick.AddListener(Use);
 					DisplayInteractButton();
 				}
@@ -68,7 +69,6 @@ public class Interactable : MonoBehaviour
 	}
 	protected virtual void Use()
 	{
-		Debug.Log(gameObject.name);
 	}
 	protected virtual void DisplayInteractButton()
 	{

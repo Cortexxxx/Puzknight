@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5621513736622918062}
   - component: {fileID: 5621513736622918049}
   - component: {fileID: 5621513736622918048}
+  - component: {fileID: 7187831598935901634}
   m_Layer: 0
   m_Name: workbench
   m_TagString: Untagged
@@ -100,7 +101,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.062776804}
+  m_Offset: {x: 0, y: -0.43805486}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -111,7 +112,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.9375, y: 1.4994464}
+  m_Size: {x: 0.9375, y: 0.49778306}
   m_EdgeRadius: 0
 --- !u!114 &5621513736622918048
 MonoBehaviour:
@@ -131,6 +132,19 @@ MonoBehaviour:
   workbenchImage: {fileID: 0}
   craftCellsObject: {fileID: 0}
   itemObject: {fileID: 0}
+--- !u!114 &7187831598935901634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5621513736622918060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c996e996309a7943964cf80b467d5a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 1
 --- !u!1 &5621513737845064153
 GameObject:
   m_ObjectHideFlags: 0

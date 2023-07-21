@@ -30,7 +30,7 @@ public class CraftCell : MonoBehaviour
             cellButton.gameObject.SetActive(true);
             cellButton.onClick.RemoveAllListeners();
             cellButton.onClick.AddListener(cellButton.GetComponent<CellButton>().Put);
-            cellButton.GetComponentInChildren<TextMeshProUGUI>().text = "Положить";
+            cellButton.GetComponentInChildren<TextMeshProUGUI>().text = "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ";
         }
         
         else if (item != null && Player.Instance.holdingItem == null)
@@ -38,8 +38,9 @@ public class CraftCell : MonoBehaviour
 			cellButton.gameObject.SetActive(true);
 			cellButton.onClick.RemoveAllListeners();
 			cellButton.onClick.AddListener(cellButton.GetComponent<CellButton>().Take);
-			cellButton.GetComponentInChildren<TextMeshProUGUI>().text = "Взять";
+			cellButton.GetComponentInChildren<TextMeshProUGUI>().text = "пїЅпїЅпїЅпїЅпїЅ";
         }
+		cellButton.onClick.AddListener(UIContainer.Instance.GetComponent<AudioSource>().Play);
 		workbench.Craft();
 	}
 }

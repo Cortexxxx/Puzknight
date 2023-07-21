@@ -30,9 +30,11 @@ public class InputSign : Interactable
 		noticeInput.GetComponent<NoticeInput>().text.text = text;
 		closeButton.gameObject.SetActive(true);
 		closeButton.onClick.RemoveAllListeners();
+		closeButton.onClick.AddListener(UIContainer.Instance.GetComponent<AudioSource>().Play);
 		closeButton.onClick.AddListener(Close);
 		UIContainer.Instance.interactButton.SetActive(false);
 		noticeInput.button.onClick.RemoveAllListeners();
+		noticeInput.button.onClick.AddListener(UIContainer.Instance.GetComponent<AudioSource>().Play);
 		noticeInput.button.onClick.AddListener(CheckAnswer);
 	}
 	protected void Close()

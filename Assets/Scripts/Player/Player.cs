@@ -28,6 +28,7 @@ public class Player : MonoBehaviour
 			Button dropButton = UIContainer.Instance.dropButton.GetComponent<Button>();
 			dropButton.gameObject.SetActive(true);
 			dropButton.onClick.RemoveAllListeners();
+			dropButton.GetComponent<Button>().onClick.AddListener(UIContainer.Instance.GetComponent<AudioSource>().Play);
 			dropButton.onClick.AddListener(dropButton.GetComponent<DropButton>().Drop);
 		}
 		else if (holdingItem == null && UIContainer.Instance.dropButton.activeInHierarchy)

@@ -42,6 +42,7 @@ public class Door : Activatable
 		base.Use();
 		DisableInteracting();
 		Destroy(Player.Instance?.holdingItem?.gameObject);
+		GetComponent<AudioSource>().Play();
 		Player.Instance.holdingItem = null;
 		GetComponent<Animator>().SetTrigger("Toggle");
 		Destroy(GetComponent<Collider2D>());

@@ -15,3 +15,4 @@ MonoBehaviour:
   recipe: {fileID: 11400000, guid: 62c0565e97d43834e87cb2b6de2de911, type: 2}
   prefab: {fileID: 6666345154540612804, guid: 92dfbc877c62d1647836ef527e925e74, type: 3}
   Name: Key
+  weight: 0.7

@@ -18,8 +18,6 @@ public class LevelsGenerator : MonoBehaviour
 			GameObject cell = Instantiate(levelCell, transform);
 			cell.GetComponentInChildren<TextMeshProUGUI>().text = (i - 1).ToString();
 			cell.GetComponent<LevelCell>().levelIndex = i;
-			Debug.Log(cell.name + ": " + cell.GetComponent<LevelCell>().levelIndex);
-
 		}
 	}
 }

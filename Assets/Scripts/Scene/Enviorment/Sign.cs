@@ -27,7 +27,8 @@ public class Sign : Interactable
 		noticeImage.GetComponentInChildren<TextMeshProUGUI>().text = text;
         UIContainer.Instance.closeButton.SetActive(true);
         UIContainer.Instance.closeButton.GetComponent<Button>().onClick.RemoveAllListeners();
-		UIContainer.Instance.closeButton.GetComponent<Button>().onClick.AddListener(Close);
+        UIContainer.Instance.closeButton.GetComponent<Button>().onClick.AddListener(UIContainer.Instance.GetComponent<AudioSource>().Play);
+        UIContainer.Instance.closeButton.GetComponent<Button>().onClick.AddListener(Close);
 		UIContainer.Instance.interactButton.SetActive(false);
 	}
 	protected void Close()

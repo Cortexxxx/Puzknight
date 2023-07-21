@@ -6,6 +6,6 @@ public class Transition : MonoBehaviour
 {
 	private void Start()
 	{
-		SceneManager.LoadScene(PlayerPrefs.GetInt("levelToLoad") - 1);
+		SceneManager.LoadScene(PlayerPrefs.GetInt("levelToLoad"));
 	}
 }

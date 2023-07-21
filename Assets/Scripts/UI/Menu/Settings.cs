@@ -26,11 +26,7 @@ public class Settings : MonoBehaviour
 		}
 
 	}
-	private void Update()
-	{
-		Debug.Log(PlayerPrefs.GetFloat(soundsPrefsName));
 
-	}
 	private void Start()
 	{
 		LoadSettings();
@@ -52,7 +48,7 @@ public class Settings : MonoBehaviour
 		}
 		else
 		{
-			audioMixer.audioMixer.SetFloat("Music", -60);
+			audioMixer.audioMixer.SetFloat("Music", -80);
 		}
 
 		SaveSettings();
@@ -67,7 +63,7 @@ public class Settings : MonoBehaviour
 		}
 		else
 		{
-			audioMixer.audioMixer.SetFloat("Sounds", -60);
+			audioMixer.audioMixer.SetFloat("Sounds", -80);
 		}
 		SaveSettings();
 	}

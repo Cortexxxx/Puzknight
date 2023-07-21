@@ -15,7 +15,7 @@ public class BossHealthBar : MonoBehaviour
 	}
 	private void ClearLines()
 	{
-		for (int i = 1; i < lines.GetComponentsInChildren<Image>().Length; i++)
+		for (int i = 0 ; i < lines.GetComponentsInChildren<Image>().Length; i++)
 		{
 			Destroy(lines.GetComponentsInChildren<Image>()[i].gameObject);
 		}

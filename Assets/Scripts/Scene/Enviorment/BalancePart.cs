@@ -21,6 +21,7 @@ public class BalancePart : Interactable
 		Player.Instance.transform.position = pos;
 		canHideInteractButton = true;
 		DisableInteracting();
+		GetComponentInParent<Balance>().ReCount();
 	}
 	protected override void Update()
 	{

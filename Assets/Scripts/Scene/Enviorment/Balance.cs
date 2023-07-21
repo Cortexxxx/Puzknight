@@ -9,7 +9,7 @@ public class Balance : MonoBehaviour
 		Left,
 		Right
 	}
-	private State currentState = State.Balance;
+	[SerializeField] private State currentState = State.Balance;
 	[SerializeField] private Sprite balanceSprite;
 	[SerializeField] private Sprite leftSprite;
 	[SerializeField] private Sprite rightSprite;
@@ -18,6 +18,7 @@ public class Balance : MonoBehaviour
 	[SerializeField] private float downY;
 	[SerializeField] private float topY;
 	[SerializeField] private float midY;
+	[SerializeField] private Door door;
 	private State CurrentState
 	{
 		get {
@@ -51,6 +52,36 @@ public class Balance : MonoBehaviour
 	private void Start()
 	{
 		CurrentState = State.Balance;
+	}
+	public void ReCount()
+	{
+		float rightWeight = 0;
+		float leftWeight = 0;
+		if (right.GetComponent<BalancePart>().item != null)
+		{
+			rightWeight = right.GetComponent<BalancePart>().item.itemSO.weight;
+		}
+		if (left.GetComponent<BalancePart>().item != null)
+		{
+			leftWeight = left.GetComponent<BalancePart>().item.itemSO.weight;
+
+		}
+		if (rightWeight > leftWeight)
+		{
+			CurrentState = State.Left;
+		}
+		else if (rightWeight < leftWeight)
+		{
+			CurrentState = State.Right;
+		}
+		else
+		{
+			CurrentState = State.Balance;
+			if (rightWeight != 0)
+			{
+				door.Activate();
+			}
+		}
 	}
 
 }

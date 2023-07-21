@@ -14,6 +14,7 @@ public class CraftResultButton : MonoBehaviour
 
 	public void Take()
 	{
+		UIContainer.Instance.GetComponent<AudioSource>().Play();
 		image.sprite = null;
 		image.color = new Color(255, 255, 255, 0);
 		Player.Instance.holdingItem = craftCell.item;

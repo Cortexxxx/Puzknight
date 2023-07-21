@@ -10,9 +10,8 @@ public class MenuController : MonoBehaviour
 	private int currentLevel = 0;
 	private bool isNewGame = true;
 
-	private void Awake() 
+	private void Awake()
 	{
-		Debug.Log(PlayerPrefs.GetInt("skillPoints"));
 		if (Instance == null)
 		{
 			Instance = this;
@@ -41,17 +40,17 @@ public class MenuController : MonoBehaviour
 	{
 		if (PlayerPrefs.GetInt("isNewGame") == 0)
 		{
-			PlayerPrefs.SetInt("levelToLoad", currentLevel  + 1);
+			PlayerPrefs.SetInt("levelToLoad", currentLevel + 1);
 		}
 		else
 		{
-			PlayerPrefs.SetInt("levelToLoad", 2 + 1);
+			PlayerPrefs.SetInt("levelToLoad", 2);
 		}
 		SceneManager.LoadScene(transitionSceneIndex);
 	}
 	public void StartGame(int level)
 	{
-		PlayerPrefs.SetInt("levelToLoad", level + 1);
+		PlayerPrefs.SetInt("levelToLoad", level);
 		SceneManager.LoadScene(transitionSceneIndex);
 
 	}

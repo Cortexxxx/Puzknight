@@ -30,8 +30,13 @@ public class TrapPlate : Plate
 	{
 		Instantiate(arrow, new Vector2(arrowSpawnPoint.position.x, arrowSpawnPoint.position.y + 0.3f), Quaternion.identity, gameObject.transform);
 		yield return new WaitForSeconds(0.1f);
+		Instantiate(arrow, new Vector2(arrowSpawnPoint.position.x, arrowSpawnPoint.position.y + 1.1f), Quaternion.identity, gameObject.transform);
+		yield return new WaitForSeconds(0.1f);
 		Instantiate(arrow, new Vector2(arrowSpawnPoint.position.x, arrowSpawnPoint.position.y - 0.3f), Quaternion.identity, gameObject.transform);
 		yield return new WaitForSeconds(0.1f);
 		Instantiate(arrow, new Vector2(arrowSpawnPoint.position.x, arrowSpawnPoint.position.y), Quaternion.identity, gameObject.transform);
+		yield return new WaitForSeconds(0.1f);
+		Instantiate(arrow, new Vector2(arrowSpawnPoint.position.x, arrowSpawnPoint.position.y - 1.1f), Quaternion.identity, gameObject.transform);
+
 	}
 }
